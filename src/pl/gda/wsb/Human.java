@@ -11,7 +11,7 @@ public class Human {
     String position;
     Double salary;
     Animal pet;
-    Car car;
+    private Car car;
 
     public Human(String firstName, String lastName, String position, double salary) {
         this.firstName = firstName;
@@ -33,6 +33,20 @@ public class Human {
             System.out.println("Info do ZUS i US przekazane.");
             this.salary = newSalary;
         }
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        if (this.salary > car.getValue()){
+            System.out.println("Gratki, kupiłeś auto :) " + car.toString());
+            this.car = car;
+        } else if (this.salary > 0.83*car.getValue()){
+            System.out.println("Noooo a jednak, wziąłeś na kredyt...");
+            this.car = car;
+        } else System.out.println("No way! Skombinuj hajs!");
     }
 
     @Override

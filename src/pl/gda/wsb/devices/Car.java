@@ -8,13 +8,15 @@ public class Car {
     final Integer yearOfProduction;
     Double engine;
     String color;
+    private Double value;
 
-    public Car(Producer producer, String model, Integer yearOfProduction, Double engine, String color) {
+    public Car(Producer producer, String model, Integer yearOfProduction, Double engine, String color, Double value) {
         this.producer = producer;
         this.model = model;
         this.yearOfProduction = yearOfProduction;
         this.engine = engine;
         this.color = color;
+        this.value = value;
     }
 
     public Producer getProducer() {
@@ -25,16 +27,8 @@ public class Car {
         return model;
     }
 
-    public Integer getYearOfProduction() {
-        return yearOfProduction;
-    }
-
-    public Double getEngine() {
-        return engine;
-    }
-
-    public String getColor() {
-        return color;
+    public Double getValue() {
+        return value;
     }
 
     @Override

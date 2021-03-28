@@ -21,7 +21,7 @@ public class Main {
         Phone phone1 = new Phone("SAMSUNG","S10",6.9);
         Phone phone2 = new Phone("NOKIA","5.1",7.5);
 
-        Car car1 = new Car(Producer.KIA, "CARRENS",2017,1.8,"black");
+        Car car1 = new Car(Producer.KIA, "CARRENS",2017,1.8,"black", 3890.0);
 
         System.out.println(human1);
         System.out.println(human1.firstName);
@@ -56,8 +56,9 @@ public class Main {
 
         System.out.println("\n---------------------------------\n");
 
-        human1.car = car1;
-        System.out.println(human1.firstName + " have a car: " + human1.car.getProducer() + " " + human1.car.getModel() + " and have a pet " + human1.pet.name + " (" + human1.pet.species + ")");
+        human1.setCar(car1);
+        if (human1.getCar() != null) System.out.println(human1.firstName + " have a car: " + human1.getCar().getProducer() + " " + human1.getCar().getModel() + " and have a pet " + human1.pet.name + " (" + human1.pet.species + ")");
+
 
         System.out.println("\n---------------------------------\n");
 
@@ -75,5 +76,6 @@ public class Main {
         human1.setSalary(-700.0);
         System.out.println("Salary: " + human1.getSalary());
 
+        // TODO: zakończono na zadaniu 10, skończone
     }
 }
