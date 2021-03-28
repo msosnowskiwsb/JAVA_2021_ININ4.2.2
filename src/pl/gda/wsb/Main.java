@@ -1,5 +1,8 @@
 package pl.gda.wsb;
 
+import org.w3c.dom.ls.LSOutput;
+
+import javax.crypto.spec.PSource;
 import java.util.ArrayList;
 
 public class Main {
@@ -9,6 +12,8 @@ public class Main {
 
         Human human1 = new Human("Jan","Nowak","Java Developer",12500.0);
         Human human2 = new Human("Janusz","Kowalski","Automation Tester",6900.0);
+        Human human3 = new Human("Piotr","Nowy","Support man",4600.0);
+        Human human4 = new Human("Piotr","Nowy","Support man",4600.0);
 
         Animal animal1 = new Animal("mouse","Jerry");
         Animal animal2 = new Animal("lion","Mufsa");
@@ -16,7 +21,7 @@ public class Main {
         Phone phone1 = new Phone("SAMSUNG","S10",6.9);
         Phone phone2 = new Phone("NOKIA","5.1",7.5);
 
-        Car car1 = new Car("KIA", "CARRENS",2017,1.8,"black");
+        Car car1 = new Car(Producer.KIA, "CARRENS",2017,1.8,"black");
 
         System.out.println(human1);
         System.out.println(human1.firstName);
@@ -31,7 +36,7 @@ public class Main {
         humanslist.add(human2);
 
         for (Human human : humanslist){
-            System.out.println(human.firstName);
+            System.out.println(human);
         }
 
         System.out.println("\n------------------------\n");
@@ -53,5 +58,15 @@ public class Main {
 
         human1.car = car1;
         System.out.println(human1.firstName + " have a car: " + human1.car.producer + " " + human1.car.model + " and have a pet " + human1.pet.name + " (" + human1.pet.species + ")");
+
+        System.out.println("\n---------------------------------\n");
+
+        if (human3.equals(human4)) System.out.println("Wynik porównania: TRUE");
+        else System.out.println("Wynik porównania: FALSE");
+
+        System.out.println(human1);
+        System.out.println(animal1);
+        System.out.println(phone1);
+        System.out.println(car1);
     }
 }

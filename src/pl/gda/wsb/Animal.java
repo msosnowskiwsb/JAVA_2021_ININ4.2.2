@@ -42,4 +42,16 @@ public class Animal {
             System.out.println(this.species + " --> Thx for a walk bro, my weight is now: " + this.weight);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", DEFAULT_MOUSE_WEIGHT=" + DEFAULT_MOUSE_WEIGHT +
+                ", DEFAULT_LION_WEIGHT=" + DEFAULT_LION_WEIGHT +
+                ", DEFAULT_WEIGHT=" + DEFAULT_WEIGHT +
+                '}';
+    }
 }
