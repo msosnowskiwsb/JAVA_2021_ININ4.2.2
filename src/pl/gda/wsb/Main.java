@@ -16,6 +16,8 @@ public class Main {
         Phone phone1 = new Phone("SAMSUNG","S10",6.9);
         Phone phone2 = new Phone("NOKIA","5.1",7.5);
 
+        Car car1 = new Car("KIA", "CARRENS",2017,1.8,"black");
+
         System.out.println(human1);
         System.out.println(human1.firstName);
 
@@ -46,5 +48,10 @@ public class Main {
         animal1.takeForAWalk();
         animal1.takeForAWalk();
         animal1.feed();
+
+        System.out.println("\n---------------------------------\n");
+
+        human1.car = car1;
+        System.out.println(human1.firstName + " have a car: " + human1.car.producer + " " + human1.car.model + " and have a pet " + human1.pet.name + " (" + human1.pet.species + ")");
     }
 }
