@@ -68,5 +68,12 @@ public class Main {
         System.out.println(animal1);
         System.out.println(phone1);
         System.out.println(car1);
+
+        System.out.println("\n---------------------------------\n");
+
+        human1.setSalary(14700.0);
+        human1.setSalary(-700.0);
+        System.out.println("Salary: " + human1.getSalary());
+
     }
 }

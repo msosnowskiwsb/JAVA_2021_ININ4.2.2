@@ -2,13 +2,14 @@ package pl.gda.wsb;
 
 import pl.gda.wsb.devices.Car;
 
+import java.util.Date;
 import java.util.Objects;
 
 public class Human {
     String firstName;
     String lastName;
     String position;
-    double salary;
+    Double salary;
     Animal pet;
     Car car;
 
@@ -19,28 +20,19 @@ public class Human {
         this.salary = salary;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public double getSalary() {
+    public Double getSalary() {
+        System.out.println(new Date() + ": Pobrano informację o wysokości zarobków - " + this.lastName + "(" + this.position +")");
         return salary;
     }
 
-    public Animal getPet() {
-        return pet;
-    }
-
-    public Car getCar() {
-        return car;
+    public void setSalary(Double newSalary) {
+        if (salary < 0) System.out.println("Nikt nie będzie dokładał do pracy!");
+        else {
+            System.out.println("Dane o podwyżce wysłane do księgowości.");
+            System.out.println("Aneks do odebrania u pani Hani.");
+            System.out.println("Info do ZUS i US przekazane.");
+            this.salary = newSalary;
+        }
     }
 
     @Override
