@@ -1,5 +1,7 @@
 package pl.gda.wsb;
 
+import pl.gda.wsb.devices.Car;
+
 import java.util.Objects;
 
 public class Human {
@@ -15,6 +17,30 @@ public class Human {
         this.lastName = lastName;
         this.position = position;
         this.salary = salary;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public Animal getPet() {
+        return pet;
+    }
+
+    public Car getCar() {
+        return car;
     }
 
     @Override

@@ -1,8 +1,8 @@
 package pl.gda.wsb;
 
-import org.w3c.dom.ls.LSOutput;
+import pl.gda.wsb.devices.Car;
+import pl.gda.wsb.devices.Phone;
 
-import javax.crypto.spec.PSource;
 import java.util.ArrayList;
 
 public class Main {
@@ -57,7 +57,7 @@ public class Main {
         System.out.println("\n---------------------------------\n");
 
         human1.car = car1;
-        System.out.println(human1.firstName + " have a car: " + human1.car.producer + " " + human1.car.model + " and have a pet " + human1.pet.name + " (" + human1.pet.species + ")");
+        System.out.println(human1.firstName + " have a car: " + human1.car.getProducer() + " " + human1.car.getModel() + " and have a pet " + human1.pet.name + " (" + human1.pet.species + ")");
 
         System.out.println("\n---------------------------------\n");
 
