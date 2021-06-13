@@ -51,6 +51,29 @@ public class Human {
         } else System.out.println("No way! Skombinuj hajs!");
     }
 
+    public Double getCash() {
+        return cash;
+    }
+
+    public void setCash(Double cash) {
+        this.cash = cash;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public boolean hasCar (Car newCar){
+        if (this.car == newCar){
+            return true;
+        }
+        return false;
+    }
+
+    public void removeCar(){
+        this.car = null;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

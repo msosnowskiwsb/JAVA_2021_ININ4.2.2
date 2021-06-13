@@ -83,6 +83,10 @@ public class Main {
 
         System.out.println("\n---------------------------------\n");
 
-        car1.sell(human1,human2,6800.0);
+        try {
+            car1.sell(human1,human2,82.0);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

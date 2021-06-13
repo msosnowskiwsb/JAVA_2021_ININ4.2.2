@@ -44,7 +44,23 @@ public class Car extends Device{
     }
 
     @Override
-    public void sell(Human seller, Human buyer, Double cash) {
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
         System.out.println("Zaimplementuj mnie!");
+
+        if(!seller.hasCar(this)){
+            throw new Exception("Klient nie ma tego auta");
+        }
+        if (buyer.getCash() < price){
+            throw new Exception("Klient nie ma tyle szmalu");
+        }
+
+        buyer.setCar(this);
+        seller.removeCar();
+        seller.setCash(seller.getCash() + price);
+        buyer.setCash(buyer.getCash() - price);
+
+        System.out.println("Sprzedano");
+
+        System.out.println("Sprzedano auto: " + this.producer + " " + this.model + ". Kupił " + buyer.getLastName() + " od " + seller.getLastName() + " za " + price + "." );
     }
 }
