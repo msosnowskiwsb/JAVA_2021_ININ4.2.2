@@ -1,5 +1,6 @@
 package pl.gda.wsb.devices;
 
+import pl.gda.wsb.Human;
 import pl.gda.wsb.Producer;
 
 public class Car extends Device{
@@ -40,5 +41,10 @@ public class Car extends Device{
                 ", engine=" + engine +
                 ", color='" + color + '\'' +
                 '}';
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double cash) {
+        System.out.println("Zaimplementuj mnie!");
     }
 }

@@ -10,14 +10,16 @@ public class Human {
     String lastName;
     String position;
     Double salary;
+    Double cash;
     Animal pet;
     private Car car;
 
-    public Human(String firstName, String lastName, String position, double salary) {
+    public Human(String firstName, String lastName, String position, Double salary, Double cash) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
         this.salary = salary;
+        this.cash = cash;
     }
 
     public Double getSalary() {

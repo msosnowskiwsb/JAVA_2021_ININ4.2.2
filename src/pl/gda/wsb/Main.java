@@ -10,10 +10,10 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        Human human1 = new Human("Jan","Nowak","Java Developer",12500.0);
-        Human human2 = new Human("Janusz","Kowalski","Automation Tester",6900.0);
-        Human human3 = new Human("Piotr","Nowy","Support man",4600.0);
-        Human human4 = new Human("Piotr","Nowy","Support man",4600.0);
+        Human human1 = new Human("Jan","Nowak","Java Developer",12500.0,10000.0);
+        Human human2 = new Human("Janusz","Kowalski","Automation Tester",6900.0,15000.0);
+        Human human3 = new Human("Piotr","Nowy","Support man",4600.0,20000.0);
+        Human human4 = new Human("Piotr","Nowy","Support man",4600.0,5000.0);
 
         Animal animal1 = new Animal("mouse","Jerry");
         Animal animal2 = new Animal("lion","Mufsa");
@@ -80,5 +80,9 @@ public class Main {
 
         car1.turnOn();
         phone1.turnOn();
+
+        System.out.println("\n---------------------------------\n");
+
+        car1.sell(human1,human2,6800.0);
     }
 }
