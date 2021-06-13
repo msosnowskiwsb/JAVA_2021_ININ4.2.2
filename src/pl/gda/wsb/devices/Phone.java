@@ -1,14 +1,18 @@
 package pl.gda.wsb.devices;
 
-public class Phone {
-    String producer;
-    String model;
+import pl.gda.wsb.Producer;
+
+public class Phone extends Device{
     double screenSize;
 
-    public Phone(String producer, String model, double screenSize) {
-        this.producer = producer;
-        this.model = model;
+    public Phone(Producer producer, String model, Integer yearOFProduction, double screenSize) {
+        super(producer,model,yearOFProduction);
         this.screenSize = screenSize;
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Telefon został włączony.");
     }
 
     @Override

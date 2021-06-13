@@ -18,8 +18,8 @@ public class Main {
         Animal animal1 = new Animal("mouse","Jerry");
         Animal animal2 = new Animal("lion","Mufsa");
 
-        Phone phone1 = new Phone("SAMSUNG","S10",6.9);
-        Phone phone2 = new Phone("NOKIA","5.1",7.5);
+        Phone phone1 = new Phone(Producer.SAMSUNG,"S10",2020,6.8);
+        Phone phone2 = new Phone(Producer.NOKIA,"5.1",2019,7.2);
 
         Car car1 = new Car(Producer.KIA, "CARRENS",2017,1.8,"black", 3890.0);
 
@@ -76,6 +76,9 @@ public class Main {
         human1.setSalary(-700.0);
         System.out.println("Salary: " + human1.getSalary());
 
-        // TODO: zakończono na zadaniu 10, skończone
+        System.out.println("\n---------------------------------\n");
+
+        car1.turnOn();
+        phone1.turnOn();
     }
 }
