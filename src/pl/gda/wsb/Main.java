@@ -1,5 +1,7 @@
 package pl.gda.wsb;
 
+import pl.gda.wsb.creatures.Animal;
+import pl.gda.wsb.creatures.Human;
 import pl.gda.wsb.devices.Car;
 import pl.gda.wsb.devices.Phone;
 
@@ -24,10 +26,10 @@ public class Main {
         Car car1 = new Car(Producer.KIA, "CARRENS",2017,1.8,"black", 3890.0);
 
         System.out.println(human1);
-        System.out.println(human1.firstName);
+        System.out.println(human1.getLastName());
 
         Animal animalWithMaxWeight = animal1.getWeight() > animal2.getWeight() ? animal1 : animal2;
-        System.out.println("The heaviest animal is " + animalWithMaxWeight.name + ". Its weight is: " + animalWithMaxWeight.getWeight() + " kg.");
+        // System.out.println("The heaviest animal is " + animalWithMaxWeight.name + ". Its weight is: " + animalWithMaxWeight.getWeight() + " kg.");
 
         System.out.println("\n------------------------\n");
 
@@ -41,8 +43,8 @@ public class Main {
 
         System.out.println("\n------------------------\n");
 
-        human1.pet = animal1;
-        System.out.println(human1.firstName + " have a pet: " + human1.pet.species + ", his name: " + human1.pet.name);
+        human1.setPet(animal1);
+        // System.out.println(human1.firstName + " have a pet: " + human1.getPet(). + ", his name: " + human1.pet.name);
 
         animal2.feed();
         animal2.takeForAWalk();
@@ -57,7 +59,7 @@ public class Main {
         System.out.println("\n---------------------------------\n");
 
         human1.setCar(car1);
-        if (human1.getCar() != null) System.out.println(human1.firstName + " have a car: " + human1.getCar().getProducer() + " " + human1.getCar().getModel() + " and have a pet " + human1.pet.name + " (" + human1.pet.species + ")");
+        if (human1.getCar() != null) // System.out.println(human1.getFirstName() + " have a car: " + human1.getCar().getProducer() + " " + human1.getCar().getModel() + " and have a pet " + human1.pet.name + " (" + human1.pet.species + ")");
 
 
         System.out.println("\n---------------------------------\n");

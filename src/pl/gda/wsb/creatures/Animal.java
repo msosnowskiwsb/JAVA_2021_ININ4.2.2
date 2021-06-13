@@ -1,4 +1,7 @@
-package pl.gda.wsb;
+package pl.gda.wsb.creatures;
+
+import pl.gda.wsb.Saleable;
+import pl.gda.wsb.creatures.Human;
 
 public class Animal implements Saleable {
     final String species;
@@ -27,7 +30,7 @@ public class Animal implements Saleable {
         return weight;
     }
 
-    void feed() {
+    public void feed() {
         if (weight <= 0) {
             System.out.println(this.species + " --> To late :(");
         } else {
@@ -36,7 +39,7 @@ public class Animal implements Saleable {
         }
     }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         weight--;
         if (weight <= 0) {
             System.out.println(this.species + " --> No! You can't go for a walk with a dead animal");

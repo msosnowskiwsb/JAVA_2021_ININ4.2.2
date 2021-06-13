@@ -1,11 +1,11 @@
-package pl.gda.wsb;
+package pl.gda.wsb.creatures;
 
 import pl.gda.wsb.devices.Car;
 
 import java.util.Date;
 import java.util.Objects;
 
-public class Human extends Animal{
+public class Human extends Animal {
     String firstName;
     String lastName;
     String position;
@@ -74,6 +74,22 @@ public class Human extends Animal{
 
     public void removeCar(){
         this.car = null;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Animal getPet() {
+        return pet;
+    }
+
+    public void setPet(Animal pet) {
+        this.pet = pet;
     }
 
     @Override
