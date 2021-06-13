@@ -5,7 +5,7 @@ import pl.gda.wsb.devices.Car;
 import java.util.Date;
 import java.util.Objects;
 
-public class Human {
+public class Human extends Animal{
     String firstName;
     String lastName;
     String position;
@@ -13,8 +13,10 @@ public class Human {
     Double cash;
     Animal pet;
     private Car car;
+    public static final String HUMAN_SPECIES = "homo sapiens";
 
     public Human(String firstName, String lastName, String position, Double salary, Double cash) {
+        super(HUMAN_SPECIES);
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
