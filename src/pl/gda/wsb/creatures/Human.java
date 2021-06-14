@@ -44,13 +44,7 @@ public class Human extends Animal {
     }
 
     public void setCar(Car car) {
-        if (this.salary > car.getValue()){
-            System.out.println("Gratki, kupiłeś auto :) " + car.toString());
-            this.car = car;
-        } else if (this.salary > 0.83*car.getValue()){
-            System.out.println("Noooo a jednak, wziąłeś na kredyt...");
-            this.car = car;
-        } else System.out.println("No way! Skombinuj hajs!");
+        this.car = car;
     }
 
     public Double getCash() {
@@ -112,9 +106,19 @@ public class Human extends Animal {
 
     @Override
     public String toString() {
-        return "First name: " + firstName +
-                ", lastName: " + lastName +
-                ", position: " + position +
-                ", salary=" + salary;
+        return "Human{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", position='" + position + '\'' +
+                ", salary=" + salary +
+                ", cash=" + cash +
+                ", pet=" + pet +
+                ", car=" + car +
+                ", species='" + species + '\'' +
+                ", name='" + name + '\'' +
+                ", DEFAULT_MOUSE_WEIGHT=" + DEFAULT_MOUSE_WEIGHT +
+                ", DEFAULT_LION_WEIGHT=" + DEFAULT_LION_WEIGHT +
+                ", DEFAULT_WEIGHT=" + DEFAULT_WEIGHT +
+                '}';
     }
 }

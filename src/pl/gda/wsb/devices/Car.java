@@ -45,8 +45,6 @@ public class Car extends Device{
 
     @Override
     public void sell(Human seller, Human buyer, Double price) throws Exception {
-        System.out.println("Zaimplementuj mnie!");
-
         if(!seller.hasCar(this)){
             throw new Exception("Klient nie ma tego auta");
         }

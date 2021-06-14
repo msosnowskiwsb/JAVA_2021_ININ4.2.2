@@ -30,6 +30,14 @@ public class Animal implements Saleable {
         return weight;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
     public void feed() {
         if (weight <= 0) {
             System.out.println(this.species + " --> To late :(");
@@ -73,6 +81,11 @@ public class Animal implements Saleable {
                     seller.pet = null;
                     buyer.setCash(buyer.getCash() - price);
                     seller.setCash(seller.getCash() + price);
+                    System.out.println("\nSprzedano zwierzę: " + this.species + " " + this.name + ". Kupił " + buyer.getLastName() + " od " + seller.getLastName() + " za " + price + ".");
+                    System.out.println(seller.getLastName() + " ma teraz " + seller.getCash() + ", a " + buyer.getLastName() + " ma " + buyer.getCash() + ".");
+
+                    System.out.println(seller.getLastName() + " ma zwierzę: " + seller.pet);
+                    System.out.println(buyer.getLastName() + " ma zwierzę: " + buyer.pet);
                 } else {
                     throw new Exception("Klient nie ma tego zwierzęcia");
                 }
