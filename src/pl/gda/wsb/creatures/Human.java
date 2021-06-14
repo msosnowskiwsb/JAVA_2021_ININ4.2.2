@@ -1,6 +1,7 @@
 package pl.gda.wsb.creatures;
 
 import pl.gda.wsb.devices.Car;
+import pl.gda.wsb.devices.Phone;
 
 import java.util.Date;
 import java.util.Objects;
@@ -13,6 +14,7 @@ public class Human extends Animal {
     Double cash;
     Animal pet;
     private Car car;
+    private Phone phone;
     public static final String HUMAN_SPECIES = "homo sapiens";
 
     public Human(String firstName, String lastName, String position, Double salary, Double cash) {
@@ -59,6 +61,14 @@ public class Human extends Animal {
         return lastName;
     }
 
+    public Phone getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Phone phone) {
+        this.phone = phone;
+    }
+
     public boolean hasCar (Car newCar){
         if (this.car == newCar){
             return true;
@@ -85,6 +95,8 @@ public class Human extends Animal {
     public void setPet(Animal pet) {
         this.pet = pet;
     }
+
+
 
     @Override
     public boolean equals(Object o) {

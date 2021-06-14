@@ -103,5 +103,12 @@ public class Main {
             e.printStackTrace();
         }
 
+        human4.setPhone(phone1);
+        try {
+            phone1.sell(human4,human3,560.0);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
